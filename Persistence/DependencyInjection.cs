@@ -1,7 +1,9 @@
-﻿using Application.Interfaces;
+﻿
+using Diplom.Application.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using WebAPI;
 
 namespace Persistence
 {
