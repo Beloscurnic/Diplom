@@ -3,14 +3,14 @@ using System.Collections.Generic;
 
 #nullable disable
 
-namespace Diplom.Domain
+namespace Domain
 {
     public partial class VProductAndDescription
     {
         public int ProductId { get; set; }
         public string Name { get; set; }
         public string ProductModel { get; set; }
-        public string CultureId { get; set; }
+        public string Culture { get; set; }
         public string Description { get; set; }
     }
 }

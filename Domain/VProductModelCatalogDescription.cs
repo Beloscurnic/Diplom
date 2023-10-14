@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 #nullable disable
 
-namespace Diplom.Domain
+namespace Domain
 {
     public partial class VProductModelCatalogDescription
     {

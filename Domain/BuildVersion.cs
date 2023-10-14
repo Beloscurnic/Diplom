@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 #nullable disable
 
-namespace Diplom.Domain
+namespace Domain
 {
-    public partial class AwbuildVersion
+    public partial class BuildVersion
     {
         public byte SystemInformationId { get; set; }
         public string DatabaseVersion { get; set; }

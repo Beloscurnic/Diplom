@@ -3,13 +3,13 @@ using System.Collections.Generic;
 
 #nullable disable
 
-namespace Diplom.Domain
+namespace Domain
 {
     public partial class ProductDescription
     {
         public ProductDescription()
         {
-            ProductModelProductDescriptionCultures = new HashSet<ProductModelProductDescriptionCulture>();
+            ProductModelProductDescriptions = new HashSet<ProductModelProductDescription>();
         }
 
         public int ProductDescriptionId { get; set; }
@@ -17,6 +17,6 @@ namespace Diplom.Domain
         public Guid Rowguid { get; set; }
         public DateTime ModifiedDate { get; set; }
 
-        public virtual ICollection<ProductModelProductDescriptionCulture> ProductModelProductDescriptionCultures { get; set; }
+        public virtual ICollection<ProductModelProductDescription> ProductModelProductDescriptions { get; set; }
     }
 }

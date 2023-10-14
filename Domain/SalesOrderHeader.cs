@@ -3,14 +3,13 @@ using System.Collections.Generic;
 
 #nullable disable
 
-namespace Diplom.Domain
+namespace Domain
 {
     public partial class SalesOrderHeader
     {
         public SalesOrderHeader()
         {
             SalesOrderDetails = new HashSet<SalesOrderDetail>();
-            SalesOrderHeaderSalesReasons = new HashSet<SalesOrderHeaderSalesReason>();
         }
 
         public int SalesOrderId { get; set; }
@@ -24,14 +23,10 @@ namespace Diplom.Domain
         public string PurchaseOrderNumber { get; set; }
         public string AccountNumber { get; set; }
         public int CustomerId { get; set; }
-        public int? SalesPersonId { get; set; }
-        public int? TerritoryId { get; set; }
-        public int BillToAddressId { get; set; }
-        public int ShipToAddressId { get; set; }
-        public int ShipMethodId { get; set; }
-        public int? CreditCardId { get; set; }
+        public int? ShipToAddressId { get; set; }
+        public int? BillToAddressId { get; set; }
+        public string ShipMethod { get; set; }
         public string CreditCardApprovalCode { get; set; }
-        public int? CurrencyRateId { get; set; }
         public decimal SubTotal { get; set; }
         public decimal TaxAmt { get; set; }
         public decimal Freight { get; set; }
@@ -41,14 +36,8 @@ namespace Diplom.Domain
         public DateTime ModifiedDate { get; set; }
 
         public virtual Address BillToAddress { get; set; }
-        public virtual CreditCard CreditCard { get; set; }
-        public virtual CurrencyRate CurrencyRate { get; set; }
         public virtual Customer Customer { get; set; }
-        public virtual SalesPerson SalesPerson { get; set; }
-        public virtual ShipMethod ShipMethod { get; set; }
         public virtual Address ShipToAddress { get; set; }
-        public virtual SalesTerritory Territory { get; set; }
         public virtual ICollection<SalesOrderDetail> SalesOrderDetails { get; set; }
-        public virtual ICollection<SalesOrderHeaderSalesReason> SalesOrderHeaderSalesReasons { get; set; }
     }
 }
